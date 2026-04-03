@@ -17,15 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        for($i = 1; $i <=10; $i++) {
-            $data = [
-                'title' => "title{$i}",
-                'description' => "description{$i}",
-                'status' => 'active',
-            ];
-            
-            Task::create($data);
-        }
+        Task::factory()->count(3)->create();
         
         // User::factory(10)->create();
 /*
